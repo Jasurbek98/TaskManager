@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/edit_history"
+    tools:context=".ui.screens.history.HistoryActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarHistory"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbarHistory"
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            app:titleTextColor="#fff" />
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/historyViewPager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/bottomHistory"
+        app:layout_constraintTop_toBottomOf="@id/appBarHistory" />
+
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/bottomHistory"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/colorPrimaryDark"
+        android:paddingLeft="8dp"
+        android:paddingTop="5dp"
+        android:paddingRight="8dp"
+        android:paddingBottom="5dp"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/historyTabLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/tab_layout_back"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:tabBackground="@drawable/tab_back"
+            app:tabGravity="fill"
+            app:tabIconTint="@color/tab_icon"
+            app:tabIndicator="@drawable/tab_indicator"
+            app:tabIndicatorColor="#fff"
+            app:tabIndicatorFullWidth="true"
+            app:tabIndicatorGravity="stretch"
+            app:tabInlineLabel="true"
+            app:tabMode="fixed"
+            app:tabPaddingBottom="0dp"
+            app:tabPaddingEnd="4dp"
+            app:tabPaddingStart="4dp"
+            app:tabPaddingTop="0dp"
+            app:tabTextAppearance="@style/TabTextDesign"
+            app:tabTextColor="@color/tab_icon" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

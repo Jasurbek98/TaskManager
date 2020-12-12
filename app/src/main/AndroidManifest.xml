@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.tasknotes">
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <application
+        android:name=".app.App"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".ui.screens.splash.SplashActivity"
+            android:theme="@style/NoActionBarMaterial">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+
+<!--        <activity
+            android:name=".ui.screens.conditions.ConditionsActivity"
+            android:theme="@style/NoActionBarMaterial" />-->
+        <activity
+            android:name=".ui.screens.history.HistoryActivity"
+            android:theme="@style/NoActionBarMaterial" />
+        <activity
+            android:name=".ui.screens.edit.EditActivity"
+            android:theme="@style/NoActionBarMaterial" />
+        <activity
+            android:name=".ui.screens.recyclebin.RecycleBinActivity"
+            android:theme="@style/NoActionBarMaterial" />
+        <activity
+            android:name=".ui.screens.taskinformation.TaskInformationActivity"
+            android:theme="@style/NoActionBarAppcompat" />
+        <activity
+            android:name=".ui.screens.alltasks.AllTasksActivity"
+            android:theme="@style/NoActionBarMaterial" />
+        <activity
+            android:name=".ui.screens.intro.IntroActivity"
+            android:theme="@style/NoActionBarAppcompat">
+
+        </activity>
+        <activity
+            android:name=".ui.screens.main.MainActivity"
+            android:theme="@style/NoActionBarTransparent">
+        </activity>
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_provider_path" />
+        </provider>
+    </application>
+
+</manifest>

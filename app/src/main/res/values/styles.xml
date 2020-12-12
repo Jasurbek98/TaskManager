@@ -1,0 +1,89 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="titleTextColor">#fff</item>
+        <item name="android:homeAsUpIndicator">@drawable/ic_baseline_arrow_back_white</item>
+    </style>
+
+    <style name="NoActionBarTransparent" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="titleTextColor">#fff</item>
+        <item name="android:homeAsUpIndicator">@drawable/ic_baseline_arrow_back_white</item>
+    </style>
+
+    <style name="NoActionBarAppcompat" parent="@style/Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="titleTextColor">#fff</item>
+        <item name="android:homeAsUpIndicator">@drawable/ic_baseline_arrow_back_white</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="NoActionBarMaterial" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="titleTextColor">#fff</item>
+        <item name="android:homeAsUpIndicator">@drawable/ic_baseline_arrow_back_white</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="Button">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+    </style>
+
+    <style name="Button.IntroButton">
+        <item name="android:layout_height">50dp</item>
+        <item name="android:layout_width">150dp</item>
+        <item name="android:background">@drawable/intro_btn_bg</item>
+    </style>
+
+    <style name="Text">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+    </style>
+
+    <style name="Text.Title">
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Text.Title.Light">
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="Text.Header">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">#000</item>
+        <item name="android:textSize">25sp</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="Text.AvatarEmail">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <style name="Text.Description">
+        <item name="android:layout_width">280dp</item>
+        <item name="android:textColor">#BDBCBC</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="TabTextDesign" parent="TextAppearance.Design.Tab">
+        <item name="textAllCaps">true</item>
+        <item name="android:textSize">10sp</item>
+
+    </style>
+</resources>

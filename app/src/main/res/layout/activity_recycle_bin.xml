@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.screens.recyclebin.RecycleBinActivity"
+    android:orientation="vertical"
+    android:background="@drawable/trash">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarTrash"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbarTrash"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:titleTextColor="#fff" />
+    </com.google.android.material.appbar.AppBarLayout>
+    <include layout="@layout/task_fragment"/>
+</LinearLayout>

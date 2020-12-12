@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="10dp"
+    app:cardUseCompatPadding="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/itemLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <View
+            android:id="@+id/priorityView"
+            android:layout_width="6dp"
+            android:layout_height="0dp"
+            android:background="@color/colorPrimaryDark"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textDeadline"
+            style="@style/Text"
+            android:layout_width="0dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            app:layout_constraintLeft_toRightOf="@id/priorityView"
+            app:layout_constraintRight_toRightOf="@id/guideline"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="2020.03.31" />
+
+        <TextView
+            android:id="@+id/textTaskName"
+            style="@style/Text.Title"
+            android:layout_width="0dp"
+            android:layout_marginLeft="10dp"
+            android:textSize="23sp"
+            app:layout_constraintBottom_toTopOf="@id/textTag"
+            app:layout_constraintLeft_toRightOf="@id/priorityView"
+            app:layout_constraintRight_toRightOf="@id/guideline"
+            app:layout_constraintTop_toBottomOf="@id/textDeadline"
+            tools:text="Task" />
+
+        <TextView
+            android:id="@+id/textTag"
+            style="@style/Text"
+            android:layout_width="0dp"
+            android:layout_marginLeft="5dp"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/priorityView"
+            app:layout_constraintRight_toLeftOf="@id/textDate"
+            tools:text="#Android" />
+
+        <TextView
+            android:id="@+id/textDate"
+            style="@style/Text"
+            android:layout_width="0dp"
+            android:layout_marginRight="5dp"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="@id/textTag"
+            app:layout_constraintLeft_toRightOf="@id/textTag"
+            app:layout_constraintRight_toRightOf="@id/guideline"
+            app:layout_constraintTop_toTopOf="@id/textTag"
+            tools:text="Date" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.75" />
+
+        <CheckBox
+            android:id="@+id/checked"
+            style="@style/Button"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:text="Completed"
+            android:visibility="gone"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:clickable="true"
+            android:id="@+id/deleteButton"
+            style="@style/Text"
+            android:layout_marginLeft="5dp"
+            android:text="Delete"
+            android:textColor="#000"
+            android:textSize="15sp"
+            android:visibility="gone"
+            android:drawableLeft="@drawable/ic_delete_black_24dp"
+            app:layout_constraintLeft_toRightOf="@id/guideline"
+            app:layout_constraintTop_toBottomOf="@id/checked"
+            android:focusable="true" />
+
+        <TextView
+            android:clickable="true"
+            android:id="@+id/editButton"
+            style="@style/Text"
+            android:layout_marginLeft="5dp"
+            android:text="Edit"
+            android:textColor="#000"
+            android:textSize="15sp"
+            android:drawableLeft="@drawable/ic_mode_edit"
+            android:visibility="gone"
+            app:layout_constraintBottom_toTopOf="@id/restoreButton"
+            app:layout_constraintLeft_toRightOf="@id/guideline"
+            app:layout_constraintTop_toBottomOf="@id/deleteButton"
+            android:focusable="true" />
+
+
+
+
+        <TextView
+            android:id="@+id/restoreButton"
+            style="@style/Text"
+            android:layout_marginLeft="5dp"
+            android:text="Restore"
+            android:textColor="#000"
+            android:textSize="15sp"
+            android:visibility="gone"
+            android:drawableLeft="@drawable/ic_restore"
+            app:layout_constraintBottom_toTopOf="@id/cancelButton"
+            app:layout_constraintLeft_toRightOf="@id/guideline"
+            app:layout_constraintTop_toBottomOf="@id/editButton" />
+
+
+        <TextView
+            android:id="@+id/cancelButton"
+            style="@style/Text"
+            android:layout_marginLeft="5dp"
+            android:text="Cancel"
+            android:textColor="#000"
+            android:visibility="gone"
+            android:drawableLeft="@drawable/ic_cancel"
+            app:layout_constraintBottom_toTopOf="@+id/deleteForeverButton"
+            app:layout_constraintLeft_toRightOf="@id/guideline"
+            app:layout_constraintTop_toBottomOf="@id/restoreButton" />
+
+        <TextView
+            android:id="@+id/deleteForeverButton"
+            style="@style/Text"
+            android:layout_marginLeft="5dp"
+            android:text="Delete"
+            android:textColor="#000"
+            android:visibility="gone"
+            android:drawableLeft="@drawable/ic_baseline_delete_forever"
+            app:layout_constraintBottom_toTopOf="@+id/cloneButton"
+            app:layout_constraintLeft_toRightOf="@id/guideline"
+            app:layout_constraintTop_toBottomOf="@id/cancelButton" />
+
+        <TextView
+            android:id="@+id/cloneButton"
+            style="@style/Text"
+            android:layout_marginLeft="5dp"
+            android:text="Clone"
+            android:textColor="#000"
+            android:visibility="gone"
+            android:drawableLeft="@drawable/ic_clone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/guideline"
+            app:layout_constraintTop_toBottomOf="@id/deleteForeverButton" />
+        <LinearLayout
+            android:id="@+id/wrapLayout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="@id/itemLayout"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toLeftOf="@id/itemLayout"
+            app:layout_constraintRight_toRightOf="@id/itemLayout"
+            app:layout_constraintTop_toTopOf="@id/itemLayout"
+            app:layout_constraintVertical_bias="0.0" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>
