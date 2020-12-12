@@ -1,7 +1,7 @@
 <resources>
-   <!-- <item name="titleTextColor">#fff</item>
-    <item name="android:homeAsUpIndicator">@drawable/ic_baseline_arrow_back_white</item>
-   --> <!-- Base application theme. -->
+    <!-- <item name="titleTextColor">#fff</item>
+     <item name="android:homeAsUpIndicator">@drawable/ic_baseline_arrow_back_white</item>
+    --> <!-- Base application theme. -->
     <style name="AppTheme">
 
     </style>
